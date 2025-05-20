@@ -39,25 +39,12 @@ public class HealthBarReader
      * @throws AWTException when screen capture fails
      * @throws TesseractException when OCR processing fails
      */
-    public String extractNumericDataFromHpBar(int x1, int y1, int x2, int y2) throws AWTException, TesseractException
+    public String extractNumericDataFromHpBar(int x1, int y1, int x2, int y2)
+            throws AWTException, TesseractException
     {
         Rectangle rectangle = new Rectangle(x1,y1,x2-x1,y2-x2);
-
-        try
-        {
-            BufferedImage captureHealthBar = new Robot().createScreenCapture(rectangle);
-            return tesseract.doOCR(captureHealthBar);
-        }
-        catch (TesseractException tessE)
-        {
-            System.out.println("Error due to processing data with OCR: "+ tessE.getMessage());
-        }
-        catch (AWTException awtE)
-        {
-            System.out.println("Error due to invalid Robot actions: " + awtE.getMessage());
-        }
-
-        return "";
+        BufferedImage captureHealthBar = new Robot().createScreenCapture(rectangle);
+        return tesseract.doOCR(captureHealthBar);
     }
 
 
