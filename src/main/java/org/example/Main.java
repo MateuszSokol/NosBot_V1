@@ -5,6 +5,7 @@ import org.example.entity.Monster;
 import org.example.entity.Player;
 
 /**
+ *
  * Entry point of the program.
  * Initializes game entities and starts the core logic.
  */
