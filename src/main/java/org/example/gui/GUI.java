@@ -3,6 +3,10 @@ package org.example.gui;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Main GUI class responsible for creating and displaying the main application window.
+ * Initializes JFrame and JPanel components, and sets up layout and positioning.
+ */
 public class GUI
 {
     private JFrame mainWindow;
@@ -10,6 +14,13 @@ public class GUI
     private static final int WINDOW_WIDTH = 200;
     private static final int WINDOW_HEIGHT = 150;
     private final ScreenManager screenManager;
+
+
+    /**
+     * Constructs the main window and initializes the necessary components.
+     * This includes centering the window on the screen, setting the main panel,
+     * and displaying the application window.
+     */
 
     public GUI()
     {
@@ -20,10 +31,6 @@ public class GUI
         centreTheMainWindow();
         showMainWindow();
         adjustComponentsSizeToWindow();
-
-
-
-
     }
 
 

@@ -64,6 +64,11 @@ public abstract class Creature
 
     }
     // --- Setters  ---
+
+    /**
+     * sets player current hp with value passed in param
+     * @param currentHP
+     */
     public void setCurrentHP(int currentHP){
         this.currentHP = currentHP;
     }
